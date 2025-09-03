@@ -8,7 +8,7 @@ document.querySelectorAll("meta[property^='mg:']").forEach((e) => {
 Object.entries(multiGraphData).forEach(([key, value]) => {
   for (let i = 0; i < MULTIGRAPH_INSERTS.length - 1; i++){
     let newMeta = document.createElement("meta");
-    newMeta.setAttribute("property", `${MULTIGRAPH_INSERTS[i]}:${key.replace("mg:", "")}`)
+    newMeta.setAttribute("name", `${MULTIGRAPH_INSERTS[i]}:${key.replace("mg:", "")}`)
     newMeta.setAttribute("content", value)
     document.head.appendChild(newMeta)
   }
